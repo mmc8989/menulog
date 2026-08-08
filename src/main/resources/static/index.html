@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>menulog - 一言日記</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="container">
+    <!-- ユーザーバー -->
+    <div class="user-bar">
+        <span class="logo">menulog</span>
+        <div>
+            <span><strong id="display-user">ゲスト</strong> さん</span>
+            <button id="logout-btn" class="btn secondary-sm">ログアウト</button>
+        </div>
+    </div>
+
+    <!-- カレンダーヘッダー -->
+    <header class="calendar-header">
+        <button id="prev-btn" class="btn icon">＜</button>
+        <div class="month-display">
+            <span id="year-text">2026</span>
+            <h2 id="month-text">11</h2>
+        </div>
+        <button id="next-btn" class="btn icon">＞</button>
+    </header>
+
+    <!-- 縦型リスト形式カレンダー -->
+    <div id="calendar-list" class="calendar-list"></div>
+
+    <!-- 入力モーダル -->
+    <div id="entry-form" class="entry-form hidden">
+        <div class="modal-content">
+            <h3 id="selected-date"></h3>
+            <input
+                    type="text"
+                    id="diary-input"
+                    placeholder="今日の一言を入力..."
+            />
+            <div class="button-group">
+                <button id="save-btn" class="btn primary">保存</button>
+                <button id="delete-btn" class="btn danger">削除</button>
+                <button id="close-btn" class="btn secondary">キャンセル</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
