@@ -89,14 +89,14 @@ function renderCalendar() {
         <span class="day-num">${day}</span>
       </div>
       <div class="diary-content ${diaryText ? "" : "empty"}">
-        ${diaryText || "一言を入力..."}
+        ${diaryText || "献立を入力"}
       </div>
     `;
 
         row.addEventListener("click", () => {
             selectedDateKey = dateKey;
             document.getElementById("selected-date").innerText =
-                `${month + 1}月${day}日 (${weekdays[dayOfWeek]}) の日記`;
+                `${month + 1}月${day}日 (${weekdays[dayOfWeek]}) の献立`;
             document.getElementById("diary-input").value = diaries[dateKey] || "";
             document.getElementById("entry-form").classList.remove("hidden");
         });
